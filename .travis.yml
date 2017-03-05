@@ -1,0 +1,16 @@
+language: objective-c
+osx_image: xcode8.2
+cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/Carthage
+
+before_script:
+    - carthage bootstrap --platform iOS
+    - echo "struct Config { static let API_KEY = \"{$API_KEY}\" }" > "${TRAVIS_BUILD_DIR}/Helix Movie Guide/Config.swift"
+
+script:
+    - xcodebuild clean build -sdk iphonesimulator10.2 -project "Helix Movie Guide.xcodeproj" -scheme "Helix Movie Guide" CODE_SIGNING_REQUIRED=NO
+
+env:
+  global:
+    secure: N1u5+Sba5qgqXYWkHDOrF94TzYZRBfGsr2bnk+1+Ncb/JIFr0cjxqkjmvx2Copfoel9fcY+gMI1emPib4tmLtyEWySzWtZi1391fy7kmhiZX93pQ/QskS67nCAiYrUCV3N6u/xSjF200mOtTmLfddX1sp1saKD7Jkaz9zk6meUW65Cv62lpH1Wr3wn115XDzY+9yGhyjqgbscgSCrQRll3t0xJRUPYwy28/1r0QUF1noMmaGJBo32j3+k8VH1AJlp04bKI3LnVYazoplw+IPiozZhS/m3MQXHlHbrTBMddT9wtuFGuaq+b27YAfObT2bPhBBdm73ZSJQyeYQXxm28WmpWGPO9plBsuegL1dSYAKRgJ4L4HhlI2QhwtJrnetfwv8XIOl/lzVhpeJLN+n5S8etfvFCD5Y4+Tm3KfD7XxD4cw1c95KjLo/0iqN7wR3z0lopXZkvtYp4PCPA4OcRwqRpYjX0R2qz0PNElTozSxfp1b/K+fwJZRk02cmxpli7YeAT2Jmsfp8tihRNjOu1D5FqR4LCIAX+LTo5AMed7j6IOa5x3ITQE3hIVYDncJ8FJAg/YZyRWi52NDKRobMgDPf0exCRtBjDZHPyvG3YFUH85LhMprjLqbM5V3ylZoAtnpMiZt2U7NNcFoyUt9t0nFjfnU9qmvAxPkSMDkd+gW8=

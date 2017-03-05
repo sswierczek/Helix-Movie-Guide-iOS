@@ -1,0 +1,7 @@
+github "RxSwiftCommunity/RxAlamofire" "master"
+github "Hearst-DD/ObjectMapper" "2.2.1"
+github "tristanhimmelman/AlamofireObjectMapper" ~> 4.0
+github "rs/SDWebImage" ~> 4.0
+github "SwiftKit/Cuckoo" ~> 0.8
+github "Swinject/Swinject" "2.0.0"
+github "Swinject/SwinjectStoryboard" "1.0.0"
