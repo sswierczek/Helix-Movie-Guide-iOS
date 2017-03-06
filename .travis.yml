@@ -2,15 +2,21 @@ language: objective-c
 osx_image: xcode8.2
 cache:
   directories:
-    - $TRAVIS_BUILD_DIR/Carthage
+  - "$TRAVIS_BUILD_DIR/Carthage"
+sudo: false
 
 before_script:
-    - carthage bootstrap --platform iOS
-    - echo "struct Config { static let API_KEY = \"{$API_KEY}\" }" > "${TRAVIS_BUILD_DIR}/Helix Movie Guide/Config.swift"
+- carthage bootstrap --platform iOS
+- echo "struct Config { static let API_KEY = \"{$API_KEY}\" }" > "${TRAVIS_BUILD_DIR}/Helix
+  Movie Guide/Config.swift"
 
 script:
-    - xcodebuild clean build -sdk iphonesimulator10.2 -project "Helix Movie Guide.xcodeproj" -scheme "Helix Movie Guide" CODE_SIGNING_REQUIRED=NO
+- xcodebuild clean build -sdk iphonesimulator10.2 -project "Helix Movie Guide.xcodeproj" -scheme "Helix Movie Guide" CODE_SIGNING_REQUIRED=NO enableCodeCoverage YES test
+
+after_success:
+- bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
 
 env:
   global:
-    secure: N1u5+Sba5qgqXYWkHDOrF94TzYZRBfGsr2bnk+1+Ncb/JIFr0cjxqkjmvx2Copfoel9fcY+gMI1emPib4tmLtyEWySzWtZi1391fy7kmhiZX93pQ/QskS67nCAiYrUCV3N6u/xSjF200mOtTmLfddX1sp1saKD7Jkaz9zk6meUW65Cv62lpH1Wr3wn115XDzY+9yGhyjqgbscgSCrQRll3t0xJRUPYwy28/1r0QUF1noMmaGJBo32j3+k8VH1AJlp04bKI3LnVYazoplw+IPiozZhS/m3MQXHlHbrTBMddT9wtuFGuaq+b27YAfObT2bPhBBdm73ZSJQyeYQXxm28WmpWGPO9plBsuegL1dSYAKRgJ4L4HhlI2QhwtJrnetfwv8XIOl/lzVhpeJLN+n5S8etfvFCD5Y4+Tm3KfD7XxD4cw1c95KjLo/0iqN7wR3z0lopXZkvtYp4PCPA4OcRwqRpYjX0R2qz0PNElTozSxfp1b/K+fwJZRk02cmxpli7YeAT2Jmsfp8tihRNjOu1D5FqR4LCIAX+LTo5AMed7j6IOa5x3ITQE3hIVYDncJ8FJAg/YZyRWi52NDKRobMgDPf0exCRtBjDZHPyvG3YFUH85LhMprjLqbM5V3ylZoAtnpMiZt2U7NNcFoyUt9t0nFjfnU9qmvAxPkSMDkd+gW8=
+  - secure: N1u5+Sba5qgqXYWkHDOrF94TzYZRBfGsr2bnk+1+Ncb/JIFr0cjxqkjmvx2Copfoel9fcY+gMI1emPib4tmLtyEWySzWtZi1391fy7kmhiZX93pQ/QskS67nCAiYrUCV3N6u/xSjF200mOtTmLfddX1sp1saKD7Jkaz9zk6meUW65Cv62lpH1Wr3wn115XDzY+9yGhyjqgbscgSCrQRll3t0xJRUPYwy28/1r0QUF1noMmaGJBo32j3+k8VH1AJlp04bKI3LnVYazoplw+IPiozZhS/m3MQXHlHbrTBMddT9wtuFGuaq+b27YAfObT2bPhBBdm73ZSJQyeYQXxm28WmpWGPO9plBsuegL1dSYAKRgJ4L4HhlI2QhwtJrnetfwv8XIOl/lzVhpeJLN+n5S8etfvFCD5Y4+Tm3KfD7XxD4cw1c95KjLo/0iqN7wR3z0lopXZkvtYp4PCPA4OcRwqRpYjX0R2qz0PNElTozSxfp1b/K+fwJZRk02cmxpli7YeAT2Jmsfp8tihRNjOu1D5FqR4LCIAX+LTo5AMed7j6IOa5x3ITQE3hIVYDncJ8FJAg/YZyRWi52NDKRobMgDPf0exCRtBjDZHPyvG3YFUH85LhMprjLqbM5V3ylZoAtnpMiZt2U7NNcFoyUt9t0nFjfnU9qmvAxPkSMDkd+gW8=
+  - secure: UaZPXG720akkEvnGUgslr4cGSITawwOa2jry9xmL9xcGE9qndkzFNtWtJz5rD8OdNON2aYM11tQ9waZzvZ2Y1k7trv9njvzYaCR24LQbFFVTAT7Dt1zPdwnL6KDONRRXkrGBqjXh1F2Axz8+zRC/Zo12xmMTnnvrUIN1GlLBy7ZVhu1dVgcjgU87HJkJDb8awuaWn6zMNWxQCSAcPZUKggqYyQE+hwODE8M3gMPgLxkSuEg79uuJqvGyKA1YsYzDByimWarqotsmmO1blhK0m2QrZ06HSg59qxy3zLlNMU8/L8I79QVaaziWBZukynQ3l4OqufARzJYLbW8+tuNy0jQh+hlu73TURIn3/U8tW+2r2MHTgP+ejMG+r3ZXq6jjrMozR2G26u1EmKXD2Ym4Ij3USXSygH8zPlglM3yIbFSai5dW79U1yRdiM91jOhpWG9JShLo5p7CX4SMINWnQ3NnMsEzXUQbxoc5NRt2aEr27fM0admRpTrynQEpP1xk/eRSRqIa2CfJHNb93K3Psbh1gIJoZOfzLbSoxZ9uTeJcquXqoO0upeDa2Z8EX2Qu5+yTbPCo0kg42/fkDvBkt3GdHDsbN45adFnBajcatsdbm3DFmLLdxUnt7asFp8sBMBV+nmHkDK/2pYG9SivnRCpSNHa7UOcc8js7JL30BlvI=
