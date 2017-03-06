@@ -1,5 +1,5 @@
 # Helix Movie Guide (iOS)
-[![Build Status](https://travis-ci.org/sswierczek/Helix-Movie-Guide-iOS.svg?branch=master)](https://travis-ci.org/sswierczek/Helix-Movie-Guide-iOS)
+[![Build Status](https://travis-ci.org/sswierczek/Helix-Movie-Guide-iOS.svg?branch=master)](https://travis-ci.org/sswierczek/Helix-Movie-Guide-iOS) [![codecov](https://codecov.io/gh/sswierczek/Helix-Movie-Guide-iOS/branch/master/graph/badge.svg)](https://codecov.io/gh/sswierczek/Helix-Movie-Guide-iOS)
 
 My pet project for iOS, based on https://developers.themoviedb.org API.
 
