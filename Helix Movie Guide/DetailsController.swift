@@ -12,6 +12,7 @@ class DetailsController: UIViewController {
 
     @IBOutlet weak var detailsImage: UIImageView!
     @IBOutlet weak var videoWebView: UIWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     // MARK: Injected
     var presenter: DetailsPresenter?
@@ -36,12 +37,17 @@ extension DetailsController: DetailsView {
         showSimpleErrorAlert(title: "feed_fetch_error".localized, body: errorMessage)
     }
 
-    func showMovie(movie: Movie) {
+    func showLoading(show: Bool) {
+        activityIndicator.startAnimating(start: show)
+    }
+
+    func showMovieDetails(movie: Movie) {
         self.title = movie.title
         self.detailsImage.loadImage(path: movie.getFullImagePath())
     }
 
     func showVideos(videos: [Video]) {
+        // FIXME implement trailers list
         if videos.count > 0, let url = URL(string: videos[0].getFullVideoUrl()) {
             videoWebView.loadRequest( URLRequest(url: url))
         }

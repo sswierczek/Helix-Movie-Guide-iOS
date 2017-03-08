@@ -10,6 +10,10 @@
 		9E0571F11E4E7364001D6994 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0571F01E4E7364001D6994 /* Cuckoo.framework */; };
 		9E0571F51E4E7AA0001D6994 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0571F41E4E7AA0001D6994 /* HomePresenterTest.swift */; };
 		9E0572041E4E7FBA001D6994 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0572031E4E7FBA001D6994 /* GeneratedMocks.swift */; };
+		9E0D6D4D1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D6D4C1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift */; };
+		9E0D6D4F1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D6D4E1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift */; };
+		9E0D6D511E70B6F400F01BA6 /* GetMovieVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D6D501E70B6F400F01BA6 /* GetMovieVideosUseCase.swift */; };
+		9E0D6D541E70B94900F01BA6 /* UIActivityIndicatorView+ShowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D6D531E70B94900F01BA6 /* UIActivityIndicatorView+ShowTest.swift */; };
 		9E28BF951E46936B005E3CD6 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E28BF941E46936B005E3CD6 /* String+Localized.swift */; };
 		9E3306AA1E5CEE9600B467BA /* GetMoviesDiscoverUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3306A91E5CEE9600B467BA /* GetMoviesDiscoverUseCase.swift */; };
 		9E3306AE1E5CF23800B467BA /* SearchMoviesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3306AD1E5CF23800B467BA /* SearchMoviesUseCase.swift */; };
@@ -86,6 +90,10 @@
 		9E0571F01E4E7364001D6994 /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
 		9E0571F41E4E7AA0001D6994 /* HomePresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
 		9E0572031E4E7FBA001D6994 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		9E0D6D4C1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieDetailsUseCase.swift; sourceTree = "<group>"; };
+		9E0D6D4E1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Show.swift"; sourceTree = "<group>"; };
+		9E0D6D501E70B6F400F01BA6 /* GetMovieVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieVideosUseCase.swift; sourceTree = "<group>"; };
+		9E0D6D531E70B94900F01BA6 /* UIActivityIndicatorView+ShowTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+ShowTest.swift"; sourceTree = "<group>"; };
 		9E28BF941E46936B005E3CD6 /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		9E3306A91E5CEE9600B467BA /* GetMoviesDiscoverUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMoviesDiscoverUseCase.swift; sourceTree = "<group>"; };
 		9E3306AD1E5CF23800B467BA /* SearchMoviesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesUseCase.swift; sourceTree = "<group>"; };
@@ -200,6 +208,14 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		9E0D6D521E70B91500F01BA6 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				9E0D6D531E70B94900F01BA6 /* UIActivityIndicatorView+ShowTest.swift */,
+			);
+			name = Extenstions;
+			sourceTree = "<group>";
+		};
 		9E28BF921E469206005E3CD6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +223,7 @@
 				9E997AFD1E47B8F300185629 /* UIImageView+LoadImage.swift */,
 				9E74361F1E505EEC00BFBC4C /* UIViewController+ErrorAlert.swift */,
 				9E7436271E50A4B000BFBC4C /* UICollectionView+SpanCount.swift */,
+				9E0D6D4E1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift */,
 			);
 			name = Extensions;
 			path = ..;
@@ -227,6 +244,8 @@
 			children = (
 				9E3306A91E5CEE9600B467BA /* GetMoviesDiscoverUseCase.swift */,
 				9E3306AD1E5CF23800B467BA /* SearchMoviesUseCase.swift */,
+				9E0D6D4C1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift */,
+				9E0D6D501E70B6F400F01BA6 /* GetMovieVideosUseCase.swift */,
 			);
 			name = UseCases;
 			sourceTree = "<group>";
@@ -400,6 +419,7 @@
 				9E0572031E4E7FBA001D6994 /* GeneratedMocks.swift */,
 				9E0571F21E4E7A84001D6994 /* Presentation */,
 				9E7C6D531E4CDF9D0027E53B /* Model */,
+				9E0D6D521E70B91500F01BA6 /* Extenstions */,
 				CEE80D731E36524600B66ADE /* Info.plist */,
 			);
 			path = "Helix Movie GuideTests";
@@ -610,7 +630,9 @@
 				9EB88F371E6C5B99005CBF11 /* Config.swift in Sources */,
 				9EDE70451E4A661A0045CAA2 /* Video.swift in Sources */,
 				9E7436201E505EEC00BFBC4C /* UIViewController+ErrorAlert.swift in Sources */,
+				9E0D6D4F1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift in Sources */,
 				9EB88F441E6C5D15005CBF11 /* Config_template.swift in Sources */,
+				9E0D6D511E70B6F400F01BA6 /* GetMovieVideosUseCase.swift in Sources */,
 				9E3306AA1E5CEE9600B467BA /* GetMoviesDiscoverUseCase.swift in Sources */,
 				9EDFD7181E49545E0044857A /* DetailsView.swift in Sources */,
 				9EDFD7131E494C830044857A /* DetailsController.swift in Sources */,
@@ -623,6 +645,7 @@
 				9E28BF951E46936B005E3CD6 /* String+Localized.swift in Sources */,
 				9E7436231E506C3200BFBC4C /* HomeMovieCell.swift in Sources */,
 				9E9358181E469A3900FA21C7 /* Movie.swift in Sources */,
+				9E0D6D4D1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift in Sources */,
 				9E7436261E506F7D00BFBC4C /* HomeIndicatorCell.swift in Sources */,
 				9EDE70471E4A66640045CAA2 /* VideoResult.swift in Sources */,
 				CE40C3A41E3B8FBB00D34121 /* HomePresenter.swift in Sources */,
@@ -634,6 +657,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E0D6D541E70B94900F01BA6 /* UIActivityIndicatorView+ShowTest.swift in Sources */,
 				9E0571F51E4E7AA0001D6994 /* HomePresenterTest.swift in Sources */,
 				9E0572041E4E7FBA001D6994 /* GeneratedMocks.swift in Sources */,
 				9E7C6D521E4CDF990027E53B /* VideoTest.swift in Sources */,

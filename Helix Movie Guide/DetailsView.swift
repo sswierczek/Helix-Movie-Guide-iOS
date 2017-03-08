@@ -9,6 +9,7 @@
 protocol DetailsView: class {
     func setItemId(id: Int)
     func showError(errorMessage: String)
-    func showMovie(movie: Movie)
+    func showLoading(show: Bool)
+    func showMovieDetails(movie: Movie)
     func showVideos(videos: [Video])
 }

@@ -15,13 +15,16 @@ import RxAlamofire
 class DetailsPresenter {
 
     private let disposeBag: DisposeBag = DisposeBag()
-    private let api: MovieApi?
+    private let getMovieDetailsUseCase: GetMovieDetailsUseCase?
+    private let getMovieVideosUseCase: GetMovieVideosUseCase?
 
     private weak var view: DetailsView?
     private var movieId: Int = -1
 
-    public init(api: MovieApi) {
-        self.api = api
+    public init(getMovieDetailsUseCase: GetMovieDetailsUseCase,
+                getMovieVideosUseCase: GetMovieVideosUseCase) {
+        self.getMovieDetailsUseCase = getMovieDetailsUseCase
+        self.getMovieVideosUseCase = getMovieVideosUseCase
     }
 
     func attachView(view: DetailsView) {
@@ -39,21 +42,27 @@ class DetailsPresenter {
     }
 
     private func loadMovieDetails() {
-        api?.getMovieDetails(movieId: movieId)
+        self.view?.showLoading(show: true)
+        getMovieDetailsUseCase?.execute(movieId: movieId)
             .subscribe(onNext: { movie in
-                self.view?.showMovie(movie: movie)
+                self.view?.showMovieDetails(movie: movie)
+                self.view?.showLoading(show: false)
             }, onError: { error in
                 self.view?.showError(errorMessage: error.localizedDescription)
+                self.view?.showLoading(show: false)
             })
             .addDisposableTo(disposeBag)
     }
 
     private func loadVideos() {
-        api?.getVideos(movieId: movieId)
+        self.view?.showLoading(show: true)
+        getMovieVideosUseCase?.execute(movieId: movieId)
             .subscribe(onNext: { videos in
                 self.view?.showVideos(videos: videos)
+                self.view?.showLoading(show: false)
             }, onError: { error in
                 self.view?.showError(errorMessage: error.localizedDescription)
+                self.view?.showLoading(show: false)
             })
             .addDisposableTo(disposeBag)
     }

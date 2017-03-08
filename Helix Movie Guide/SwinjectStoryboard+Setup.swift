@@ -7,7 +7,7 @@
 //
 
 import SwinjectStoryboard
-
+// FIXME Figure our scopes
 extension SwinjectStoryboard {
     class func setup() {
         defaultContainer.register(MovieApi.self) { resolver in
@@ -18,21 +18,34 @@ extension SwinjectStoryboard {
             let movieApi = resolver.resolve(MovieApi.self)
             return GetMoviesDiscoverUseCase(api: movieApi!)
         }
-        
+
         defaultContainer.register(SearchMoviesUseCase.self) { resolver in
             let movieApi = resolver.resolve(MovieApi.self)
             return SearchMoviesUseCase(api: movieApi!)
         }
-        
+
+        defaultContainer.register(GetMovieDetailsUseCase.self) { resolver in
+            let movieApi = resolver.resolve(MovieApi.self)
+            return GetMovieDetailsUseCase(api: movieApi!)
+        }
+
+        defaultContainer.register(GetMovieVideosUseCase.self) { resolver in
+            let movieApi = resolver.resolve(MovieApi.self)
+            return GetMovieVideosUseCase(api: movieApi!)
+        }
+
         defaultContainer.register(HomePresenter.self) { resolver in
             let discoverUseCase = resolver.resolve(GetMoviesDiscoverUseCase.self)
             let searchUseCase = resolver.resolve(SearchMoviesUseCase.self)
-            return HomePresenter(moviesDiscoverUseCase: discoverUseCase!, searchMoviesUseCase: searchUseCase!)
+            return HomePresenter(moviesDiscoverUseCase: discoverUseCase!,
+                                 searchMoviesUseCase: searchUseCase!)
         }
 
         defaultContainer.register(DetailsPresenter.self) { resolver in
-            let movieApi = resolver.resolve(MovieApi.self)
-            return DetailsPresenter(api: movieApi!)
+            let movieDetailsUseCase = resolver.resolve(GetMovieDetailsUseCase.self)
+            let movieVideosUseCase = resolver.resolve(GetMovieVideosUseCase.self)
+            return DetailsPresenter(getMovieDetailsUseCase: movieDetailsUseCase!,
+                                    getMovieVideosUseCase: movieVideosUseCase!)
         }
 
         defaultContainer.storyboardInitCompleted(HomeViewController.self) { resolver, controller in
