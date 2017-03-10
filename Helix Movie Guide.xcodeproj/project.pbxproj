@@ -76,13 +76,6 @@
 			remoteGlobalIDString = CEE80D581E36524600B66ADE;
 			remoteInfo = "Movie Guide";
 		};
-		CEE80D791E36524600B66ADE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CEE80D511E36524600B66ADE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CEE80D581E36524600B66ADE;
-			remoteInfo = "Movie Guide";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -143,7 +136,6 @@
 		CEE80D681E36524600B66ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE80D6D1E36524600B66ADE /* Helix Movie GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Helix Movie GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE80D731E36524600B66ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEE80D781E36524600B66ADE /* Helix Movie GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Helix Movie GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE80D7E1E36524600B66ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,13 +169,6 @@
 				CEDC68421E409D5F0056211E /* Alamofire.framework in Frameworks */,
 				CEDC68431E409D5F0056211E /* AlamofireObjectMapper.framework in Frameworks */,
 				CEDC68441E409D5F0056211E /* ObjectMapper.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEE80D751E36524600B66ADE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +375,6 @@
 			children = (
 				CEE80D591E36524600B66ADE /* Helix Movie Guide.app */,
 				CEE80D6D1E36524600B66ADE /* Helix Movie GuideTests.xctest */,
-				CEE80D781E36524600B66ADE /* Helix Movie GuideUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -472,24 +456,6 @@
 			productReference = CEE80D6D1E36524600B66ADE /* Helix Movie GuideTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CEE80D771E36524600B66ADE /* Helix Movie GuideUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CEE80D871E36524600B66ADE /* Build configuration list for PBXNativeTarget "Helix Movie GuideUITests" */;
-			buildPhases = (
-				CEE80D741E36524600B66ADE /* Sources */,
-				CEE80D751E36524600B66ADE /* Frameworks */,
-				CEE80D761E36524600B66ADE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CEE80D7A1E36524600B66ADE /* PBXTargetDependency */,
-			);
-			name = "Helix Movie GuideUITests";
-			productName = "Movie GuideUITests";
-			productReference = CEE80D781E36524600B66ADE /* Helix Movie GuideUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -505,11 +471,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					CEE80D6C1E36524600B66ADE = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = CEE80D581E36524600B66ADE;
-					};
-					CEE80D771E36524600B66ADE = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CEE80D581E36524600B66ADE;
@@ -532,7 +493,6 @@
 			targets = (
 				CEE80D581E36524600B66ADE /* Helix Movie Guide */,
 				CEE80D6C1E36524600B66ADE /* Helix Movie GuideTests */,
-				CEE80D771E36524600B66ADE /* Helix Movie GuideUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -554,13 +514,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CEE80D6B1E36524600B66ADE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEE80D761E36524600B66ADE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -661,13 +614,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEE80D741E36524600B66ADE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -675,11 +621,6 @@
 			isa = PBXTargetDependency;
 			target = CEE80D581E36524600B66ADE /* Helix Movie Guide */;
 			targetProxy = CEE80D6E1E36524600B66ADE /* PBXContainerItemProxy */;
-		};
-		CEE80D7A1E36524600B66ADE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CEE80D581E36524600B66ADE /* Helix Movie Guide */;
-			targetProxy = CEE80D791E36524600B66ADE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -878,32 +819,6 @@
 			};
 			name = Release;
 		};
-		CEE80D881E36524600B66ADE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = "Helix Movie GuideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.androidmess.helix-ui-tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Helix Movie Guide";
-			};
-			name = Debug;
-		};
-		CEE80D891E36524600B66ADE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = "Helix Movie GuideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.androidmess.helix-ui-tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Helix Movie Guide";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -930,15 +845,6 @@
 			buildConfigurations = (
 				CEE80D851E36524600B66ADE /* Debug */,
 				CEE80D861E36524600B66ADE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CEE80D871E36524600B66ADE /* Build configuration list for PBXNativeTarget "Helix Movie GuideUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CEE80D881E36524600B66ADE /* Debug */,
-				CEE80D891E36524600B66ADE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

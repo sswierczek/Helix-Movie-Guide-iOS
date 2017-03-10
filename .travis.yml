@@ -11,7 +11,7 @@ before_script:
   Movie Guide/Config.swift"
 
 script:
-- xcodebuild -project "Helix Movie Guide.xcodeproj" -scheme "Helix Movie Guide" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.2' -enableCodeCoverage YES test
+- xcodebuild -project "Helix Movie Guide.xcodeproj" -scheme "Helix Movie Guide" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,id=E40727B3-41FB-4D6E-B4CB-BFA87109EB12,OS=10.2,name=iPhone 7' -enableCodeCoverage YES clean build test
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
