@@ -66,7 +66,6 @@
 		CEE80D621E36524600B66ADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE80D601E36524600B66ADE /* Main.storyboard */; };
 		CEE80D641E36524600B66ADE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE80D631E36524600B66ADE /* Assets.xcassets */; };
 		CEE80D671E36524600B66ADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE80D651E36524600B66ADE /* LaunchScreen.storyboard */; };
-		CEE80D7D1E36524600B66ADE /* Helix_Movie_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE80D7C1E36524600B66ADE /* Helix_Movie_GuideUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,7 +144,6 @@
 		CEE80D6D1E36524600B66ADE /* Helix Movie GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Helix Movie GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE80D731E36524600B66ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEE80D781E36524600B66ADE /* Helix Movie GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Helix Movie GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEE80D7C1E36524600B66ADE /* Helix_Movie_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helix_Movie_GuideUITests.swift; sourceTree = "<group>"; };
 		CEE80D7E1E36524600B66ADE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -428,7 +426,6 @@
 		CEE80D7B1E36524600B66ADE /* Helix Movie Guide UITests */ = {
 			isa = PBXGroup;
 			children = (
-				CEE80D7C1E36524600B66ADE /* Helix_Movie_GuideUITests.swift */,
 				CEE80D7E1E36524600B66ADE /* Info.plist */,
 			);
 			name = "Helix Movie Guide UITests";
@@ -668,7 +665,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEE80D7D1E36524600B66ADE /* Helix_Movie_GuideUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
