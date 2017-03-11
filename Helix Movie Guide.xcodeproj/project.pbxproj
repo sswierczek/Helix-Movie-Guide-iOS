@@ -42,6 +42,7 @@
 		9EB88F461E6C5D65005CBF11 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9EB88F451E6C5D65005CBF11 /* README.md */; };
 		9EB88F481E6C723E005CBF11 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9EB88F471E6C723E005CBF11 /* .travis.yml */; };
 		9EC288231E743B300048B02D /* codecov.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9EC288221E743B300048B02D /* codecov.yml */; };
+		9EC288251E743E1F0048B02D /* UICollectionView+SpanCountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC288241E743E1F0048B02D /* UICollectionView+SpanCountTest.swift */; };
 		9EDE70421E4A65880045CAA2 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE70411E4A65880045CAA2 /* DetailsPresenter.swift */; };
 		9EDE70451E4A661A0045CAA2 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE70441E4A661A0045CAA2 /* Video.swift */; };
 		9EDE70471E4A66640045CAA2 /* VideoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDE70461E4A66640045CAA2 /* VideoResult.swift */; };
@@ -115,6 +116,7 @@
 		9EB88F451E6C5D65005CBF11 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9EB88F471E6C723E005CBF11 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; lineEnding = 0; path = .travis.yml; sourceTree = "<group>"; };
 		9EC288221E743B300048B02D /* codecov.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
+		9EC288241E743E1F0048B02D /* UICollectionView+SpanCountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+SpanCountTest.swift"; sourceTree = "<group>"; };
 		9EDE70411E4A65880045CAA2 /* DetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		9EDE70441E4A661A0045CAA2 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		9EDE70461E4A66640045CAA2 /* VideoResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResult.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0D6D531E70B94900F01BA6 /* UIActivityIndicatorView+ShowTest.swift */,
+				9EC288241E743E1F0048B02D /* UICollectionView+SpanCountTest.swift */,
 			);
 			name = Extenstions;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 			files = (
 				9E0D6D541E70B94900F01BA6 /* UIActivityIndicatorView+ShowTest.swift in Sources */,
 				9E0571F51E4E7AA0001D6994 /* HomePresenterTest.swift in Sources */,
+				9EC288251E743E1F0048B02D /* UICollectionView+SpanCountTest.swift in Sources */,
 				9E0572041E4E7FBA001D6994 /* GeneratedMocks.swift in Sources */,
 				9E7C6D521E4CDF990027E53B /* VideoTest.swift in Sources */,
 			);
