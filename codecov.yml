@@ -2,3 +2,6 @@ coverage:
     ignore:
         - "Helix Movie GuideTests/*"
         - "Helix Movie GuideUITests/*"
+        - "Helix Movie Guide/DI/*"
+        - "Helix Movie Guide/AppDelegate.swift"
+        - "Helix Movie Guide/*Controller.swift"

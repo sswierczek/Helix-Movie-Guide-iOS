@@ -93,7 +93,7 @@
 		9E2CFC141E744C1300BE2CA2 /* UIImageView+LoadImageTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImageTest.swift"; sourceTree = "<group>"; };
 		9E3306A91E5CEE9600B467BA /* GetMoviesDiscoverUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMoviesDiscoverUseCase.swift; sourceTree = "<group>"; };
 		9E3306AD1E5CF23800B467BA /* SearchMoviesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesUseCase.swift; sourceTree = "<group>"; };
-		9E39FB9C1E4FA820009E3FE7 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
+		9E39FB9C1E4FA820009E3FE7 /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SwinjectStoryboard+Setup.swift"; path = "DI/SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		9E39FB9F1E4FAEC0009E3FE7 /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = Carthage/Build/iOS/Swinject.framework; sourceTree = "<group>"; };
 		9E39FBA01E4FAEC0009E3FE7 /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = Carthage/Build/iOS/SwinjectStoryboard.framework; sourceTree = "<group>"; };
 		9E4A70451E48B60100F48284 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
@@ -365,7 +365,6 @@
 		CEE80D501E36524600B66ADE = {
 			isa = PBXGroup;
 			children = (
-				9EC288221E743B300048B02D /* codecov.yml */,
 				CEE80D5B1E36524600B66ADE /* Helix Movie Guide */,
 				9E997AFB1E47B6A000185629 /* Scripts */,
 				9E997AF61E47AD6500185629 /* Cartfile */,
@@ -375,6 +374,7 @@
 				CED8C01F1E38F65000A1C6EE /* Frameworks */,
 				9EB88F381E6C5BEC005CBF11 /* .gitignore */,
 				9EB88F471E6C723E005CBF11 /* .travis.yml */,
+				9EC288221E743B300048B02D /* codecov.yml */,
 				9EB88F451E6C5D65005CBF11 /* README.md */,
 			);
 			sourceTree = "<group>";
