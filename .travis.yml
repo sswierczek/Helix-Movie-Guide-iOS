@@ -1,10 +1,11 @@
-language: objective-c
+language: swift
 osx_image: xcode8.2
 cache:
   directories:
   - "$TRAVIS_BUILD_DIR/Carthage"
 
 before_install:
+- gem install xcpretty
 - curl -L -O https://github.com/YPlan/CartfileDiff/releases/download/0.1/CartfileDiff.pkg
 - sudo installer -pkg CartfileDiff.pkg -target /
 
@@ -14,7 +15,7 @@ before_script:
 
 script:
 - ./Scripts/bootstrap-if-needed.sh
-- xcodebuild -project "Helix Movie Guide.xcodeproj" -scheme "Helix Movie Guide" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,id=E40727B3-41FB-4D6E-B4CB-BFA87109EB12,OS=10.2' -enableCodeCoverage YES clean build test
+- xcodebuild -project "Helix Movie Guide.xcodeproj" -scheme "Helix Movie Guide" CODE_SIGNING_REQUIRED=NO -destination 'platform=iOS Simulator,id=E40727B3-41FB-4D6E-B4CB-BFA87109EB12,OS=10.2' -enableCodeCoverage YES build test | xcpretty
 
 after_success:
 - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -J 'Helix Movie Guide'
