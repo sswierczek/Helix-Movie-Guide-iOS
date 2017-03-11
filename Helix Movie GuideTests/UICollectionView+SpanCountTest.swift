@@ -13,7 +13,7 @@ import ObjectMapper
 // FIXME Add precondition testing when it will be possible in Swift
 class UICollectionViewExtensionSpanCountTest: XCTestCase {
 
-    let ACCURANCY = 0.1
+    let ACCURACY = CGFloat(0.1)
     let COLLECTION_VIEW_SIZE = 100
     let OK_SPAN_COUNT = 1
 
@@ -31,9 +31,9 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
 
         collectionView?.setSpanCount(portrait: OK_SPAN_COUNT, landscape: testedSpanCount)
 
-        let expectedSize = (collectionView?.frame.width)! * CGFloat(Float(1) / Float(testedSpanCount))
-        XCTAssertEqual(flowLayout?.itemSize.width, expectedSize)
-        XCTAssertEqual(flowLayout?.itemSize.height, expectedSize)
+        let expectedSize = Float((collectionView?.frame.width)! * CGFloat(Float(1) / Float(testedSpanCount)))
+        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.width)!), expectedSize, accuracy: FLT_EPSILON)
+        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.height)!), expectedSize, accuracy: FLT_EPSILON)
     }
 
     func test_GIVEN_portraitOrientation_WHEN_spanCountGreaterThanZero_THEN_itemWidthIsSetToDividedFrameWidth() {
@@ -42,9 +42,19 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
 
         collectionView?.setSpanCount(portrait: testedSpanCount, landscape: OK_SPAN_COUNT)
 
-        let expectedSize = (collectionView?.frame.width)! * CGFloat(Float(1) / Float(testedSpanCount))
-        XCTAssertEqual(flowLayout?.itemSize.width, expectedSize)
-        XCTAssertEqual(flowLayout?.itemSize.height, expectedSize)
+        let expectedSize = Float((collectionView?.frame.width)! * CGFloat(Float(1) / Float(testedSpanCount)))
+        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.width)!), expectedSize, accuracy: FLT_EPSILON)
+        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.height)!), expectedSize, accuracy: FLT_EPSILON)
+    }
+
+    func test_WHEN_layoutIsNotFloatLayout_THEN_doNotChangeItemDefaultSizes() {
+        collectionView?.collectionViewLayout = UICollectionViewLayout()
+
+        collectionView?.setSpanCount(portrait: OK_SPAN_COUNT, landscape: OK_SPAN_COUNT)
+
+        let defaultSize = Float(COLLECTION_VIEW_SIZE / 2)
+        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.width)!), defaultSize, accuracy: FLT_EPSILON)
+        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.height)!), defaultSize, accuracy: FLT_EPSILON)
     }
 
     func setOrientation(value: Any?) {
