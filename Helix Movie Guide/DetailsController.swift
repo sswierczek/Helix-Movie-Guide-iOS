@@ -48,8 +48,19 @@ extension DetailsController: DetailsView {
 
     func showVideos(videos: [Video]) {
         // FIXME implement trailers list
-        if videos.count > 0, let url = URL(string: videos[0].getFullVideoUrl()) {
-            videoWebView.loadRequest( URLRequest(url: url))
+        // FIXME do catch Remove this from view
+        if videos.count > 0 {
+            guard let urlString = try? videos[0].getFullVideoUrl() else {
+                showSimpleErrorAlert(title: "details_cannot_load_trailers".localized, body: "")
+                return
+            }
+
+            guard let url = URL(string: urlString) else {
+                showSimpleErrorAlert(title: "details_cannot_load_trailers".localized, body: "")
+                return
+            }
+
+            videoWebView.loadRequest(URLRequest(url: url))
         }
     }
 }

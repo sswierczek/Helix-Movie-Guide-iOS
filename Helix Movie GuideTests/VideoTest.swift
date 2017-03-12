@@ -11,26 +11,89 @@ import ObjectMapper
 
 class VideoTest: XCTestCase {
 
-    let video: Video = Video()
+    let video: Video? = Video(map: Map(mappingType: MappingType.fromJSON, JSON: [:]))
 
     override func setUp() {
         super.setUp()
-        video.key = "1234abcd"
+        video?.key = "1234abcd"
     }
 
-    func test_WHEN_site_is_youtube_THEN_return_youtube_embed_url() {
-        video.site = "YouTube"
+    func test_WHEN_site_is_youtube_THEN_return_youtube_embed_url() throws {
+        video?.site = "YouTube"
 
-        let fullVideoUrl = video.getFullVideoUrl()
+        let fullVideoUrl = try video?.getFullVideoUrl()
 
-        XCTAssert(fullVideoUrl == "https://www.youtube.com/embed/1234abcd")
+        XCTAssertEqual("https://www.youtube.com/embed/1234abcd", fullVideoUrl)
     }
-    
+
     func test_WHEN_site_is_unknown_THEN_return_empty_url() {
-        video.site = "Unknown"
-        
-        let fullVideoUrl = video.getFullVideoUrl()
-        
-        XCTAssert(fullVideoUrl == "")
+        video?.site = "Unknown"
+
+        XCTAssertThrowsError(try video?.getFullVideoUrl()) { error in
+            XCTAssertEqual(error as? ApiError, ApiError.unsupportedResource)
+        }
+    }
+
+    func test_WHEN_mapHasId_THEN_idFieldIsSet() {
+        let value = "sampleValue"
+        let map = Map(mappingType: MappingType.fromJSON, JSON: ["id": value])
+
+        video?.mapping(map: map)
+
+        XCTAssertEqual(value, video?.id)
+    }
+
+    func test_WHEN_mapHasIso_639_1_THEN_iso_639_1FieldIsSet() {
+        let value = "sampleValue"
+        let map = Map(mappingType: MappingType.fromJSON, JSON: ["iso_639_1": value])
+
+        video?.mapping(map: map)
+
+        XCTAssertEqual(value, video?.iso_639_1)
+    }
+
+    func test_WHEN_mapHasIso_3166_1_THEN_iso_3166_1FieldIsSet() {
+        let value = "sampleValue"
+        let map = Map(mappingType: MappingType.fromJSON, JSON: ["iso_3166_1": value])
+
+        video?.mapping(map: map)
+
+        XCTAssertEqual(value, video?.iso_3166_1)
+    }
+
+    func test_WHEN_mapHasName_THEN_nameFieldIsSet() {
+        let value = "sampleValue"
+        let map = Map(mappingType: MappingType.fromJSON, JSON: ["name": value])
+
+        video?.mapping(map: map)
+
+        XCTAssertEqual(value, video?.name)
+    }
+
+    func test_WHEN_mapHasSite_THEN_siteFieldIsSet() {
+        let value = "sampleValue"
+        let map = Map(mappingType: MappingType.fromJSON, JSON: ["site": value])
+
+        video?.mapping(map: map)
+
+        XCTAssertEqual(value, video?.site)
+    }
+
+    func test_WHEN_mapHasSize_THEN_sizeFieldIsSet() {
+        let value = 1
+        let map = Map(mappingType: MappingType.fromJSON, JSON: ["size": value])
+
+        video?.mapping(map: map)
+
+        XCTAssertEqual(value, video?.size)
+    }
+
+    func test_WHEN_mapHasType_THEN_typeFieldIsSet() {
+        let value = "sampleValue"
+        let map = Map(mappingType: MappingType.fromJSON, JSON: ["type": value])
+
+        video?.mapping(map: map)
+
+        XCTAssertEqual(value, video?.type)
     }
 }

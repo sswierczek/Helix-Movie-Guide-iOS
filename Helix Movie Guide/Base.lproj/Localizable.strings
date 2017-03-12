@@ -2,3 +2,4 @@
 "simple_error_action_button_text" = "OK";
 "discover_screen_title" = "Discover";
 "discover_search_hint" = "Search...";
+"details_cannot_load_trailers" = "Error during loading movie trailers";

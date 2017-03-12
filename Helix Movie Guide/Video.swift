@@ -23,12 +23,8 @@ class Video: Mappable {
 
     }
 
-    public init() {
-        // For tests
-    }
-
     public func mapping(map: Map) {
-        id <- map["page"]
+        id <- map["id"]
         iso_639_1 <- map["iso_639_1"]
         iso_3166_1 <- map["iso_3166_1"]
         key <- map["key"]
@@ -38,14 +34,11 @@ class Video: Mappable {
         type <- map["type"]
     }
 
-    public func getFullVideoUrl() -> String {
+    public func getFullVideoUrl() throws -> String {
         if site == "YouTube" {
             return "https://www.youtube.com/embed/\(key!)"
         } else {
-            //FIXME Add other sites
-            NSLog("Site is not supported! \(site!)")
-            return ""
+            throw ApiError.unsupportedResource
         }
     }
-
 }
