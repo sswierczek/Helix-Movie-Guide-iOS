@@ -8,7 +8,6 @@
 
 @testable import Helix_Movie_Guide
 import XCTest
-import ObjectMapper
 
 class UIActivityIndicatorViewsExtensionsTest: XCTestCase {
 

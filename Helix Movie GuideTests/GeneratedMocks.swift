@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Helix Movie Guide/MovieApi.swift at 2017-03-12 15:09:55 +0000
+// MARK: - Mocks generated from file: Helix Movie Guide/MovieApi.swift at 2017-03-12 22:25:30 +0000
 
 //
 //  MovieApi.swift
@@ -126,7 +126,7 @@ class MovieApiStub: MovieApi {
     }
 }
 
-// MARK: - Mocks generated from file: Helix Movie Guide/GetMoviesDiscoverUseCase.swift at 2017-03-12 15:09:55 +0000
+// MARK: - Mocks generated from file: Helix Movie Guide/GetMoviesDiscoverUseCase.swift at 2017-03-12 22:25:30 +0000
 
 //
 //  GetMoviesDiscoverUseCase.swift
@@ -196,7 +196,7 @@ class GetMoviesDiscoverUseCaseStub: GetMoviesDiscoverUseCase {
     }
 }
 
-// MARK: - Mocks generated from file: Helix Movie Guide/SearchMoviesUseCase.swift at 2017-03-12 15:09:55 +0000
+// MARK: - Mocks generated from file: Helix Movie Guide/SearchMoviesUseCase.swift at 2017-03-12 22:25:30 +0000
 
 //
 //  SearchMoviesUseCase.swift

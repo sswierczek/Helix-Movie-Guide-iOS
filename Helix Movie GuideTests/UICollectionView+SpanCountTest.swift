@@ -26,7 +26,7 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
     }
 
     func test_GIVEN_landscapeOrientation_WHEN_spanCountGreaterThanZero_THEN_itemWidthIsSetToDividedFrameWidth() {
-        setOrientation(value: UIInterfaceOrientation.landscapeLeft.rawValue)
+        setOrientation(orientation: UIDeviceOrientation.landscapeLeft)
         let testedSpanCount = 4
 
         collectionView?.setSpanCount(portrait: OK_SPAN_COUNT, landscape: testedSpanCount)
@@ -37,7 +37,7 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
     }
 
     func test_GIVEN_portraitOrientation_WHEN_spanCountGreaterThanZero_THEN_itemWidthIsSetToDividedFrameWidth() {
-        setOrientation(value: UIInterfaceOrientation.portrait.rawValue)
+        setOrientation(orientation: UIDeviceOrientation.portrait)
         let testedSpanCount = 4
 
         collectionView?.setSpanCount(portrait: testedSpanCount, landscape: OK_SPAN_COUNT)
@@ -57,7 +57,10 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
         XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.height)!), defaultSize, accuracy: FLT_EPSILON)
     }
 
-    func setOrientation(value: Any?) {
-        UIDevice.current.setValue(value, forKey: "orientation")
+    func setOrientation(orientation: UIDeviceOrientation) {
+        UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
+        while UIDevice.current.orientation != orientation {
+            sleep(100) // FIXME find a better way to wait for orientation change
+        }
     }
 }

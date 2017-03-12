@@ -18,7 +18,7 @@ class VideoResult: Mappable {
     }
 
     public func mapping(map: Map) {
-        id <- map["page"]
+        id <- map["id"]
         results <- map["results"]
     }
 
