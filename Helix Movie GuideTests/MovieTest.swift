@@ -17,10 +17,6 @@ class MovieTest: XCTestCase {
 
     let movie: Movie? = Movie(map: Map(mappingType: MappingType.fromJSON, JSON: [:]))
 
-    override func setUp() {
-        super.setUp()
-    }
-
     func test_WHEN_posterPathExists_THEN_returnPathToTmdb() {
         movie?.poster_path = "/samplePath"
 
