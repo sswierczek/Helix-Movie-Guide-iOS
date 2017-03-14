@@ -11,6 +11,7 @@ import ObjectMapper
 
 class VideoTest: XCTestCase {
 
+    let value = "sampleValue"
     let video: Video? = Video(map: Map(mappingType: MappingType.fromJSON, JSON: [:]))
 
     override func setUp() {
@@ -18,7 +19,7 @@ class VideoTest: XCTestCase {
         video?.key = "1234abcd"
     }
 
-    func test_WHEN_site_is_youtube_THEN_return_youtube_embed_url() throws {
+    func test_WHEN_siteIsYoutube_THEN_returnYoutubeEmbedUrl() throws {
         video?.site = "YouTube"
 
         let fullVideoUrl = try video?.getFullVideoUrl()
@@ -26,7 +27,7 @@ class VideoTest: XCTestCase {
         XCTAssertEqual("https://www.youtube.com/embed/1234abcd", fullVideoUrl)
     }
 
-    func test_WHEN_site_is_unknown_THEN_return_empty_url() {
+    func test_WHEN_siteIsUnknown_THEN_returnEmptyUrl() {
         video?.site = "Unknown"
 
         XCTAssertThrowsError(try video?.getFullVideoUrl()) { error in
@@ -35,7 +36,6 @@ class VideoTest: XCTestCase {
     }
 
     func test_WHEN_mapHasId_THEN_idFieldIsSet() {
-        let value = "sampleValue"
         let map = Map(mappingType: MappingType.fromJSON, JSON: ["id": value])
 
         video?.mapping(map: map)
@@ -44,7 +44,6 @@ class VideoTest: XCTestCase {
     }
 
     func test_WHEN_mapHasIso_639_1_THEN_iso_639_1FieldIsSet() {
-        let value = "sampleValue"
         let map = Map(mappingType: MappingType.fromJSON, JSON: ["iso_639_1": value])
 
         video?.mapping(map: map)
@@ -53,7 +52,6 @@ class VideoTest: XCTestCase {
     }
 
     func test_WHEN_mapHasIso_3166_1_THEN_iso_3166_1FieldIsSet() {
-        let value = "sampleValue"
         let map = Map(mappingType: MappingType.fromJSON, JSON: ["iso_3166_1": value])
 
         video?.mapping(map: map)
@@ -62,7 +60,6 @@ class VideoTest: XCTestCase {
     }
 
     func test_WHEN_mapHasName_THEN_nameFieldIsSet() {
-        let value = "sampleValue"
         let map = Map(mappingType: MappingType.fromJSON, JSON: ["name": value])
 
         video?.mapping(map: map)
@@ -71,7 +68,6 @@ class VideoTest: XCTestCase {
     }
 
     func test_WHEN_mapHasSite_THEN_siteFieldIsSet() {
-        let value = "sampleValue"
         let map = Map(mappingType: MappingType.fromJSON, JSON: ["site": value])
 
         video?.mapping(map: map)
@@ -89,7 +85,6 @@ class VideoTest: XCTestCase {
     }
 
     func test_WHEN_mapHasType_THEN_typeFieldIsSet() {
-        let value = "sampleValue"
         let map = Map(mappingType: MappingType.fromJSON, JSON: ["type": value])
 
         video?.mapping(map: map)
