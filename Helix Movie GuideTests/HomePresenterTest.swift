@@ -14,29 +14,26 @@ import RxSwift
 
 class HomePresenterTest: XCTestCase {
 
-    var api: MockMovieApi?
-    var discoverUseCase: MockGetMoviesDiscoverUseCase?
-    var searchUseCase: MockSearchMoviesUseCase?
+    // FIXME Find a way to ommit constructor arguments in generated mocks
+    var discoverUseCase = MockGetMoviesDiscoverUseCase(api: MockMovieApi())
+    var searchUseCase = MockSearchMoviesUseCase(api: MockMovieApi())
 
     var homePresenter: HomePresenter?
 
     override func setUp() {
         super.setUp()
-        // FIXME Find a way to ommit constructor arguments in generated mocks
-        api = MockMovieApi()
-        discoverUseCase = MockGetMoviesDiscoverUseCase(api: api!)
-        searchUseCase = MockSearchMoviesUseCase(api: api!)
-        homePresenter = HomePresenter(moviesDiscoverUseCase: discoverUseCase!, searchMoviesUseCase: searchUseCase!)
+        homePresenter = HomePresenter(moviesDiscoverUseCase: discoverUseCase,
+                                      searchMoviesUseCase: searchUseCase)
     }
 
     func test_WHEN_scrolled_to_bottom_THEN_load_next_page() {
         let firstPage = 1
-        stub(discoverUseCase!) { stub in
+        stub(discoverUseCase) { stub in
             when(stub.execute(page: firstPage)).thenReturn(Observable.empty())
         }
 
         homePresenter?.scrolledToBottom()
 
-        verify(discoverUseCase!).execute(page: firstPage)
+        verify(discoverUseCase).execute(page: firstPage)
     }
 }
