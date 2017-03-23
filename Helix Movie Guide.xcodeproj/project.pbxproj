@@ -49,7 +49,6 @@
 		9EB88F371E6C5B99005CBF11 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB88F361E6C5B99005CBF11 /* Config.swift */; };
 		9EB88F391E6C5BEC005CBF11 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9EB88F381E6C5BEC005CBF11 /* .gitignore */; };
 		9EB88F441E6C5D15005CBF11 /* Config_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB88F431E6C5D15005CBF11 /* Config_template.swift */; };
-		9EB88F461E6C5D65005CBF11 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9EB88F451E6C5D65005CBF11 /* README.md */; };
 		9EB88F481E6C723E005CBF11 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9EB88F471E6C723E005CBF11 /* .travis.yml */; };
 		9EBF75281E75FBAC0082C508 /* VideoResultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBF75271E75FBAC0082C508 /* VideoResultTest.swift */; };
 		9EC288231E743B300048B02D /* codecov.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9EC288221E743B300048B02D /* codecov.yml */; };
@@ -666,7 +665,6 @@
 				9E7436281E50A4B000BFBC4C /* UICollectionView+SpanCount.swift in Sources */,
 				CEE80D5F1E36524600B66ADE /* HomeViewController.swift in Sources */,
 				9E3306AE1E5CF23800B467BA /* SearchMoviesUseCase.swift in Sources */,
-				9EB88F461E6C5D65005CBF11 /* README.md in Sources */,
 				9E39FB9E1E4FA9E3009E3FE7 /* SwinjectStoryboard+Setup.swift in Sources */,
 				9EB88F371E6C5B99005CBF11 /* Config.swift in Sources */,
 				9EDE70451E4A661A0045CAA2 /* Video.swift in Sources */,
