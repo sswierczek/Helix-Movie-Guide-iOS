@@ -26,7 +26,7 @@ class GetMovieVideosUseCaseTest: XCTestCase {
             when(stub.getVideos(movieId: executedMovieId)).thenReturn(Observable.empty())
         }
 
-        getMovieVideosUseCase?.execute(movieId: executedMovieId)
+        _ = getMovieVideosUseCase?.execute(movieId: executedMovieId)
 
         verify(api).getVideos(movieId: executedMovieId)
     }

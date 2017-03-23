@@ -26,7 +26,7 @@ class SearchMoviesUseCaseTest: XCTestCase {
             when(stub.searchMovie(query: executedQuery)).thenReturn(Observable.empty())
         }
 
-        searchMoviesUseCase?.execute(text: executedQuery)
+        _ = searchMoviesUseCase?.execute(text: executedQuery)
 
         verify(api).searchMovie(query: executedQuery)
     }

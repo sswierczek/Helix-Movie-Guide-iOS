@@ -26,7 +26,7 @@ class GetMoviesDiscoverUseCaseTest: XCTestCase {
             when(stub.getMoviesDiscover(page: discoverPage)).thenReturn(Observable.empty())
         }
 
-        getMoviesDiscoverUseCase?.execute(page: discoverPage)
+        _ = getMoviesDiscoverUseCase?.execute(page: discoverPage)
 
         verify(api).getMoviesDiscover(page: discoverPage)
     }
