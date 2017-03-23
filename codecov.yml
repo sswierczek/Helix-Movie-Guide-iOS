@@ -5,3 +5,4 @@ coverage:
         - "Helix Movie Guide/DI/*"
         - "Helix Movie Guide/AppDelegate.swift"
         - "Helix Movie Guide/*Controller.swift"
+        - "Helix Movie Guide/*Client.swift"
