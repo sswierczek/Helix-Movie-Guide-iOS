@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Helix Movie Guide/MovieApi.swift at 2017-03-23 23:03:03 +0000
+// MARK: - Mocks generated from file: Helix Movie Guide/MovieApi.swift at 2017-03-24 00:11:40 +0000
 
 //
 //  MovieApi.swift
@@ -126,51 +126,68 @@ class MovieApiStub: MovieApi {
     }
 }
 
-// MARK: - Mocks generated from file: Helix Movie Guide/GetMoviesDiscoverUseCase.swift at 2017-03-23 23:03:03 +0000
+// MARK: - Mocks generated from file: Helix Movie Guide/HomeView.swift at 2017-03-24 00:11:40 +0000
 
 //
-//  GetMoviesDiscoverUseCase.swift
+//  MainView.swift
 //  Movie Guide
 //
-//  Created by Sebastian Swierczek on 21/02/2017.
+//  Created by user on 27/01/2017.
 //  Copyright © 2017 user. All rights reserved.
 //
+
 import Cuckoo
 @testable import Helix_Movie_Guide
 
-import RxSwift
-
-class MockGetMoviesDiscoverUseCase: GetMoviesDiscoverUseCase, Cuckoo.Mock {
-    typealias MocksType = GetMoviesDiscoverUseCase
-    typealias Stubbing = __StubbingProxy_GetMoviesDiscoverUseCase
-    typealias Verification = __VerificationProxy_GetMoviesDiscoverUseCase
+class MockHomeView: HomeView, Cuckoo.Mock {
+    typealias MocksType = HomeView
+    typealias Stubbing = __StubbingProxy_HomeView
+    typealias Verification = __VerificationProxy_HomeView
     let manager = Cuckoo.MockManager()
     
-    private var observed: GetMoviesDiscoverUseCase?
+    private var observed: HomeView?
     
-    func spy(on victim: GetMoviesDiscoverUseCase) -> Self {
+    func spy(on victim: HomeView) -> Self {
         observed = victim
         return self
     }
     
-    override func execute(page: Int) -> Observable<[Movie]> {
-        return manager.call("execute(page: Int) -> Observable<[Movie]>", parameters: (page), original: observed.map { o in return { (page: Int) -> Observable<[Movie]> in o.execute(page: page) } })
+    func showError(errorMessage: String) {
+        return manager.call("showError(errorMessage: String)", parameters: (errorMessage), original: observed.map { o in return { (errorMessage: String) in o.showError(errorMessage: errorMessage) } })
     }
     
-    struct __StubbingProxy_GetMoviesDiscoverUseCase: Cuckoo.StubbingProxy {
+    func appendData(data: [Movie]) {
+        return manager.call("appendData(data: [Movie])", parameters: (data), original: observed.map { o in return { (data: [Movie]) in o.appendData(data: data) } })
+    }
+    
+    func replaceData(data: [Movie]) {
+        return manager.call("replaceData(data: [Movie])", parameters: (data), original: observed.map { o in return { (data: [Movie]) in o.replaceData(data: data) } })
+    }
+    
+    struct __StubbingProxy_HomeView: Cuckoo.StubbingProxy {
         private let manager: Cuckoo.MockManager
         
         init(manager: Cuckoo.MockManager) {
             self.manager = manager
         }
         
-        func execute<M1: Cuckoo.Matchable>(page: M1) -> Cuckoo.StubFunction<(Int), Observable<[Movie]>> where M1.MatchedType == Int {
-            let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: page) { $0 }]
-            return Cuckoo.StubFunction(stub: manager.createStub("execute(page: Int) -> Observable<[Movie]>", parameterMatchers: matchers))
+        func showError<M1: Cuckoo.Matchable>(errorMessage: M1) -> Cuckoo.StubNoReturnFunction<(String)> where M1.MatchedType == String {
+            let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: errorMessage) { $0 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("showError(errorMessage: String)", parameterMatchers: matchers))
+        }
+        
+        func appendData<M1: Cuckoo.Matchable>(data: M1) -> Cuckoo.StubNoReturnFunction<([Movie])> where M1.MatchedType == [Movie] {
+            let matchers: [Cuckoo.ParameterMatcher<([Movie])>] = [wrap(matchable: data) { $0 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("appendData(data: [Movie])", parameterMatchers: matchers))
+        }
+        
+        func replaceData<M1: Cuckoo.Matchable>(data: M1) -> Cuckoo.StubNoReturnFunction<([Movie])> where M1.MatchedType == [Movie] {
+            let matchers: [Cuckoo.ParameterMatcher<([Movie])>] = [wrap(matchable: data) { $0 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("replaceData(data: [Movie])", parameterMatchers: matchers))
         }
     }
     
-    struct __VerificationProxy_GetMoviesDiscoverUseCase: Cuckoo.VerificationProxy {
+    struct __VerificationProxy_HomeView: Cuckoo.VerificationProxy {
         private let manager: Cuckoo.MockManager
         private let callMatcher: Cuckoo.CallMatcher
         private let sourceLocation: Cuckoo.SourceLocation
@@ -182,21 +199,41 @@ class MockGetMoviesDiscoverUseCase: GetMoviesDiscoverUseCase, Cuckoo.Mock {
         }
         
         @discardableResult
-        func execute<M1: Cuckoo.Matchable>(page: M1) -> Cuckoo.__DoNotUse<Observable<[Movie]>> where M1.MatchedType == Int {
-            let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: page) { $0 }]
-            return manager.verify("execute(page: Int) -> Observable<[Movie]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        func showError<M1: Cuckoo.Matchable>(errorMessage: M1) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == String {
+            let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: errorMessage) { $0 }]
+            return manager.verify("showError(errorMessage: String)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+        
+        @discardableResult
+        func appendData<M1: Cuckoo.Matchable>(data: M1) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == [Movie] {
+            let matchers: [Cuckoo.ParameterMatcher<([Movie])>] = [wrap(matchable: data) { $0 }]
+            return manager.verify("appendData(data: [Movie])", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+        
+        @discardableResult
+        func replaceData<M1: Cuckoo.Matchable>(data: M1) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == [Movie] {
+            let matchers: [Cuckoo.ParameterMatcher<([Movie])>] = [wrap(matchable: data) { $0 }]
+            return manager.verify("replaceData(data: [Movie])", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
     }
 }
 
-class GetMoviesDiscoverUseCaseStub: GetMoviesDiscoverUseCase {
+class HomeViewStub: HomeView {
     
-    override func execute(page: Int) -> Observable<[Movie]> {
-        return DefaultValueRegistry.defaultValue(for: (Observable<[Movie]>).self)
+    func showError(errorMessage: String) {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+    func appendData(data: [Movie]) {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+    func replaceData(data: [Movie]) {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
 }
 
-// MARK: - Mocks generated from file: Helix Movie Guide/SearchMoviesUseCase.swift at 2017-03-23 23:03:03 +0000
+// MARK: - Mocks generated from file: Helix Movie Guide/SearchMoviesUseCase.swift at 2017-03-24 00:11:40 +0000
 
 //
 //  SearchMoviesUseCase.swift
@@ -263,6 +300,76 @@ class MockSearchMoviesUseCase: SearchMoviesUseCase, Cuckoo.Mock {
 class SearchMoviesUseCaseStub: SearchMoviesUseCase {
     
     override func execute(text: String) -> Observable<[Movie]> {
+        return DefaultValueRegistry.defaultValue(for: (Observable<[Movie]>).self)
+    }
+}
+
+// MARK: - Mocks generated from file: Helix Movie Guide/GetMoviesDiscoverUseCase.swift at 2017-03-24 00:11:40 +0000
+
+//
+//  GetMoviesDiscoverUseCase.swift
+//  Movie Guide
+//
+//  Created by Sebastian Swierczek on 21/02/2017.
+//  Copyright © 2017 user. All rights reserved.
+//
+import Cuckoo
+@testable import Helix_Movie_Guide
+
+import RxSwift
+
+class MockGetMoviesDiscoverUseCase: GetMoviesDiscoverUseCase, Cuckoo.Mock {
+    typealias MocksType = GetMoviesDiscoverUseCase
+    typealias Stubbing = __StubbingProxy_GetMoviesDiscoverUseCase
+    typealias Verification = __VerificationProxy_GetMoviesDiscoverUseCase
+    let manager = Cuckoo.MockManager()
+    
+    private var observed: GetMoviesDiscoverUseCase?
+    
+    func spy(on victim: GetMoviesDiscoverUseCase) -> Self {
+        observed = victim
+        return self
+    }
+    
+    override func execute(page: Int) -> Observable<[Movie]> {
+        return manager.call("execute(page: Int) -> Observable<[Movie]>", parameters: (page), original: observed.map { o in return { (page: Int) -> Observable<[Movie]> in o.execute(page: page) } })
+    }
+    
+    struct __StubbingProxy_GetMoviesDiscoverUseCase: Cuckoo.StubbingProxy {
+        private let manager: Cuckoo.MockManager
+        
+        init(manager: Cuckoo.MockManager) {
+            self.manager = manager
+        }
+        
+        func execute<M1: Cuckoo.Matchable>(page: M1) -> Cuckoo.StubFunction<(Int), Observable<[Movie]>> where M1.MatchedType == Int {
+            let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: page) { $0 }]
+            return Cuckoo.StubFunction(stub: manager.createStub("execute(page: Int) -> Observable<[Movie]>", parameterMatchers: matchers))
+        }
+    }
+    
+    struct __VerificationProxy_GetMoviesDiscoverUseCase: Cuckoo.VerificationProxy {
+        private let manager: Cuckoo.MockManager
+        private let callMatcher: Cuckoo.CallMatcher
+        private let sourceLocation: Cuckoo.SourceLocation
+        
+        init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+            self.manager = manager
+            self.callMatcher = callMatcher
+            self.sourceLocation = sourceLocation
+        }
+        
+        @discardableResult
+        func execute<M1: Cuckoo.Matchable>(page: M1) -> Cuckoo.__DoNotUse<Observable<[Movie]>> where M1.MatchedType == Int {
+            let matchers: [Cuckoo.ParameterMatcher<(Int)>] = [wrap(matchable: page) { $0 }]
+            return manager.verify("execute(page: Int) -> Observable<[Movie]>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
+    }
+}
+
+class GetMoviesDiscoverUseCaseStub: GetMoviesDiscoverUseCase {
+    
+    override func execute(page: Int) -> Observable<[Movie]> {
         return DefaultValueRegistry.defaultValue(for: (Observable<[Movie]>).self)
     }
 }

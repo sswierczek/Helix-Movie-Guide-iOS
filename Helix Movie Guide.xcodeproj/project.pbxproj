@@ -622,6 +622,7 @@
 				"$(SRCROOT)/Helix Movie Guide/MovieApi.swift",
 				"$(SRCROOT)/Helix Movie Guide/GetMoviesDiscoverUseCase.swift",
 				"$(SRCROOT)/Helix Movie Guide/SearchMoviesUseCase.swift",
+				"$(SRCROOT)/Helix Movie Guide/HomeView.swift",
 			);
 			outputPaths = (
 			);
