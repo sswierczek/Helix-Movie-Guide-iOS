@@ -42,6 +42,10 @@ class DetailsPresenter {
     }
 
     private func loadMovieDetails() {
+        guard movieId >= 0 else {
+            return
+        }
+
         self.view?.showLoading(show: true)
         getMovieDetailsUseCase?.execute(movieId: movieId)
             .subscribe(onNext: { movie in
@@ -55,6 +59,10 @@ class DetailsPresenter {
     }
 
     private func loadVideos() {
+        guard movieId >= 0 else {
+            return
+        }
+        
         self.view?.showLoading(show: true)
         getMovieVideosUseCase?.execute(movieId: movieId)
             .subscribe(onNext: { videos in
