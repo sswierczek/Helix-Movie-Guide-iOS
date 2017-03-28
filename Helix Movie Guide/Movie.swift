@@ -50,7 +50,7 @@ public class Movie: Mappable {
         if let poster = poster_path {
             return "https://image.tmdb.org/t/p/w500\(poster)"
         } else {
-            return "http://placehold.it/500?text=\(original_title)"
+            return "http://placehold.it/500?text=\(original_title!)"
         }
     }
 }

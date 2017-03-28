@@ -8,13 +8,13 @@ if [ -e "$CACHED_CARTFILE" ]; then
     if [ ! -z "$OUTDATED_DEPENDENCIES" ]
     then
         echo "Bootstrapping outdated dependencies: $OUTDATED_DEPENDENCIES"
-        carthage bootstrap "$OUTDATED_DEPENDENCIES" --platform iOS
+        carthage bootstrap "$OUTDATED_DEPENDENCIES" --platform iOS --no-use-binaries
     else
         echo "Cartfile.resolved matches cached, skipping bootstrap"
     fi
 else
     echo "Cached Cartfile.resolved not found, bootstrapping all dependencies"
-    carthage bootstrap --platform iOS
+    carthage bootstrap --platform iOS --no-use-binaries
 fi
 
 # Copy Cartfile.resolved to Carthage to cache it and then compare with repo version
