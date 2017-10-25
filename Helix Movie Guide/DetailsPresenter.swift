@@ -55,7 +55,7 @@ class DetailsPresenter {
                 self.view?.showError(errorMessage: error.localizedDescription)
                 self.view?.showLoading(show: false)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 
     private func loadVideos() {
@@ -72,7 +72,7 @@ class DetailsPresenter {
                 self.view?.showError(errorMessage: error.localizedDescription)
                 self.view?.showLoading(show: false)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 
 }

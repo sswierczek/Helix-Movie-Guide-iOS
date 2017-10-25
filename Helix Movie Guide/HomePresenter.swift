@@ -44,7 +44,7 @@ class HomePresenter {
             }, onError: { error in
                 self.view?.showError(errorMessage: error.localizedDescription)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 
     func searchTextChanged(text: String) {
@@ -54,6 +54,6 @@ class HomePresenter {
             }, onError: { error in
                 self.view?.showError(errorMessage: error.localizedDescription)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
     }
 }

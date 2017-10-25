@@ -32,8 +32,8 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
         collectionView?.setSpanCount(portrait: OK_SPAN_COUNT, landscape: testedSpanCount)
 
         let expectedSize = Float((collectionView?.frame.width)! * CGFloat(Float(1) / Float(testedSpanCount)))
-        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.width)!), expectedSize, accuracy: FLT_EPSILON)
-        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.height)!), expectedSize, accuracy: FLT_EPSILON)
+        XCTAssertEqual(Float((flowLayout?.itemSize.width)!), expectedSize, accuracy: Float.ulpOfOne)
+        XCTAssertEqual(Float((flowLayout?.itemSize.height)!), expectedSize, accuracy: Float.ulpOfOne)
     }
 
     func test_GIVEN_portraitOrientation_WHEN_spanCountGreaterThanZero_THEN_itemWidthIsSetToDividedFrameWidth() {
@@ -43,8 +43,8 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
         collectionView?.setSpanCount(portrait: testedSpanCount, landscape: OK_SPAN_COUNT)
 
         let expectedSize = Float((collectionView?.frame.width)! * CGFloat(Float(1) / Float(testedSpanCount)))
-        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.width)!), expectedSize, accuracy: FLT_EPSILON)
-        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.height)!), expectedSize, accuracy: FLT_EPSILON)
+        XCTAssertEqual(Float((flowLayout?.itemSize.width)!), expectedSize, accuracy: Float.ulpOfOne)
+        XCTAssertEqual(Float((flowLayout?.itemSize.height)!), expectedSize, accuracy: Float.ulpOfOne)
     }
 
     func test_WHEN_layoutIsNotFloatLayout_THEN_doNotChangeItemDefaultSizes() {
@@ -53,8 +53,8 @@ class UICollectionViewExtensionSpanCountTest: XCTestCase {
         collectionView?.setSpanCount(portrait: OK_SPAN_COUNT, landscape: OK_SPAN_COUNT)
 
         let defaultSize = Float(COLLECTION_VIEW_SIZE / 2)
-        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.width)!), defaultSize, accuracy: FLT_EPSILON)
-        XCTAssertEqualWithAccuracy(Float((flowLayout?.itemSize.height)!), defaultSize, accuracy: FLT_EPSILON)
+        XCTAssertEqual(Float((flowLayout?.itemSize.width)!), defaultSize, accuracy: Float.ulpOfOne)
+        XCTAssertEqual(Float((flowLayout?.itemSize.height)!), defaultSize, accuracy: Float.ulpOfOne)
     }
 
     func setOrientation(orientation: UIDeviceOrientation) {

@@ -9,7 +9,7 @@
 import SwinjectStoryboard
 // FIXME Figure our scopes
 extension SwinjectStoryboard {
-    class func setup() {
+    @objc class func setup() {
         defaultContainer.register(MovieApi.self) { resolver in
             return MovieApiClient()
         }

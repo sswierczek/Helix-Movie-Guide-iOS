@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9E0571F11E4E7364001D6994 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0571F01E4E7364001D6994 /* Cuckoo.framework */; };
 		9E0571F51E4E7AA0001D6994 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0571F41E4E7AA0001D6994 /* HomePresenterTest.swift */; };
-		9E0572041E4E7FBA001D6994 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0572031E4E7FBA001D6994 /* GeneratedMocks.swift */; };
 		9E0D6D4D1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D6D4C1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift */; };
 		9E0D6D4F1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D6D4E1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift */; };
 		9E0D6D511E70B6F400F01BA6 /* GetMovieVideosUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D6D501E70B6F400F01BA6 /* GetMovieVideosUseCase.swift */; };
@@ -60,6 +59,7 @@
 		9EDFD7131E494C830044857A /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFD7121E494C830044857A /* DetailsController.swift */; };
 		9EDFD7181E49545E0044857A /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFD7171E49545E0044857A /* DetailsView.swift */; };
 		9EE8D5881E7B4CA500D000E2 /* HomeMovieCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE8D5871E7B4CA500D000E2 /* HomeMovieCellTest.swift */; };
+		9EFFA0C31FA0FC730000B825 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFFA0C21FA0FC730000B825 /* GeneratedMocks.swift */; };
 		CE40C3A41E3B8FBB00D34121 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40C3A31E3B8FBB00D34121 /* HomePresenter.swift */; };
 		CE40C3A61E3B90A000D34121 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40C3A51E3B90A000D34121 /* HomeView.swift */; };
 		CE7BBDA71E3A4EB4008B1D8A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7BBDA01E3A4EB4008B1D8A /* Alamofire.framework */; };
@@ -95,7 +95,6 @@
 /* Begin PBXFileReference section */
 		9E0571F01E4E7364001D6994 /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
 		9E0571F41E4E7AA0001D6994 /* HomePresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
-		9E0572031E4E7FBA001D6994 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		9E0D6D4C1E70B2EC00F01BA6 /* GetMovieDetailsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieDetailsUseCase.swift; sourceTree = "<group>"; };
 		9E0D6D4E1E70B4D900F01BA6 /* UIActivityIndicatorView+Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Show.swift"; sourceTree = "<group>"; };
 		9E0D6D501E70B6F400F01BA6 /* GetMovieVideosUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetMovieVideosUseCase.swift; sourceTree = "<group>"; };
@@ -147,6 +146,7 @@
 		9EDFD7121E494C830044857A /* DetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
 		9EDFD7171E49545E0044857A /* DetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		9EE8D5871E7B4CA500D000E2 /* HomeMovieCellTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMovieCellTest.swift; sourceTree = "<group>"; };
+		9EFFA0C21FA0FC730000B825 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		CE40C3A31E3B8FBB00D34121 /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		CE40C3A51E3B90A000D34121 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE7BBDA01E3A4EB4008B1D8A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -498,7 +498,7 @@
 		CEE80D701E36524600B66ADE /* Helix Movie GuideTests */ = {
 			isa = PBXGroup;
 			children = (
-				9E0572031E4E7FBA001D6994 /* GeneratedMocks.swift */,
+				9EFFA0C21FA0FC730000B825 /* GeneratedMocks.swift */,
 				9E0571F21E4E7A84001D6994 /* Presentation */,
 				9E7C6D531E4CDF9D0027E53B /* Model */,
 				9E0D6D521E70B91500F01BA6 /* Extenstions */,
@@ -563,7 +563,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = user;
 				TargetAttributes = {
 					CEE80D581E36524600B66ADE = {
@@ -724,10 +724,10 @@
 				9E56AEC81E789B9400F89698 /* MovieTest.swift in Sources */,
 				9E319DA01E832E6E009E256F /* ObservableType+MapObjectTest.swift in Sources */,
 				9E7CB5171E7C86F8000A2FAC /* GetMovieDetailsUseCaseTest.swift in Sources */,
+				9EFFA0C31FA0FC730000B825 /* GeneratedMocks.swift in Sources */,
 				9E0571F51E4E7AA0001D6994 /* HomePresenterTest.swift in Sources */,
 				9E2CFC151E744C1300BE2CA2 /* UIImageView+LoadImageTest.swift in Sources */,
 				9EC288251E743E1F0048B02D /* UICollectionView+SpanCountTest.swift in Sources */,
-				9E0572041E4E7FBA001D6994 /* GeneratedMocks.swift in Sources */,
 				9E7C6D521E4CDF990027E53B /* VideoTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,7 +782,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -790,7 +792,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -819,6 +825,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -833,7 +840,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -841,7 +850,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -862,6 +875,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -879,7 +893,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.androidmess.helix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -895,7 +909,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.androidmess.helix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -913,7 +927,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.androidmess.helix-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Helix Movie Guide.app/Helix Movie Guide";
 			};
 			name = Debug;
@@ -932,7 +946,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.androidmess.helix-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Helix Movie Guide.app/Helix Movie Guide";
 			};
 			name = Release;

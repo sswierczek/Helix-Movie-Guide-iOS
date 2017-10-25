@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode8.2
+osx_image: xcode9
 cache:
   directories:
   - "$TRAVIS_BUILD_DIR/Carthage"

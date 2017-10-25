@@ -31,7 +31,7 @@ class MovieTest: XCTestCase {
 
         let fullImagePathvie = movie?.getFullImagePath()
 
-        XCTAssertEqual("http://placehold.it/500?text=\(movie?.original_title)", fullImagePathvie)
+        XCTAssertEqual("http://placehold.it/500?text=\(movie?.original_title ?? "empty")", fullImagePathvie)
     }
 
     func test_WHEN_mapHasPosterPath_THEN_posterPathFieldIsSet() {
